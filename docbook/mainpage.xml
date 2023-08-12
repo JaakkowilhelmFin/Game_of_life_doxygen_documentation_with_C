@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
+<title>Game of Life - Simple Version</title>
+<indexterm><primary>Game of Life - Simple Version</primary></indexterm>
+<section xml:id="_index_1intro_sec">
+<title>Introduction</title>
+
+<para>This program is a simple implementation of Conway&apos;s Game of Life, a cellular automaton simulation. It evolves according to certain rules based on the initial configuration of cells.</para>
+</section>
+<section xml:id="_index_1usage_sec">
+<title>Usage</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Compile: gcc -o game_of_life game_of_life.c</para>
+</listitem><listitem>
+<para>Run: ./game_of_life </para>
+</listitem></itemizedlist>
+</para>
+</section>
+</chapter>

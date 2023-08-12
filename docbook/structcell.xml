@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structcell" xml:lang="en-US">
+<title>cell Struct Reference</title>
+<indexterm><primary>cell</primary></indexterm>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_structcell_1ab04e2d55ea4a544f3575812582af7b51">current</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structcell_1aa241470e0d60c525670c532ac936a87b">future</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structcell_1ab04e2d55ea4a544f3575812582af7b51"/><section>
+    <title>current</title>
+<indexterm><primary>current</primary><secondary>cell</secondary></indexterm>
+<indexterm><primary>cell</primary><secondary>current</secondary></indexterm>
+<para><computeroutput>int current</computeroutput></para></section>
+<anchor xml:id="_structcell_1aa241470e0d60c525670c532ac936a87b"/><section>
+    <title>future</title>
+<indexterm><primary>future</primary><secondary>cell</secondary></indexterm>
+<indexterm><primary>cell</primary><secondary>future</secondary></indexterm>
+<para><computeroutput>int future</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+<link linkend="_game__of__life__doxy_8c">game_of_life_doxy.c</link></section>
+</section>

@@ -1,0 +1,147 @@
+.TH "game_of_life_doxy.c" 3My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+game_of_life_doxy.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBcell\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBROWS\fP   9"
+.br
+.ti -1c
+.RI "#define \fBCOLS\fP   9"
+.br
+.ti -1c
+.RI "#define \fBDEAD\fP   0"
+.br
+.ti -1c
+.RI "#define \fBALIVE\fP   1"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBinit_gameboard\fP (struct \fBcell\fP board[\fBROWS\fP][\fBCOLS\fP])"
+.br
+.RI "Initializes the game board\&. "
+.ti -1c
+.RI "int \fBupdate_gameboard\fP (struct \fBcell\fP board[\fBROWS\fP][\fBCOLS\fP])"
+.br
+.RI "Updates the game board to the next generation based on the current state\&. "
+.ti -1c
+.RI "void \fBprint_gameboard\fP (struct \fBcell\fP board[\fBROWS\fP][\fBCOLS\fP])"
+.br
+.RI "Prints the game board to the console\&. "
+.ti -1c
+.RI "int \fBcount_neighbors\fP (struct \fBcell\fP board[\fBROWS\fP][\fBCOLS\fP])"
+.br
+.RI "counts neighbours\&. "
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.ti -1c
+.RI "int \fBcount_neighbors\fP (struct \fBcell\fP board[\fBROWS\fP][\fBCOLS\fP], int row, int col)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ALIVE   1"
+
+.SS "#define COLS   9"
+
+.SS "#define DEAD   0"
+
+.SS "#define ROWS   9"
+
+.SH "Function Documentation"
+.PP 
+.SS "int count_neighbors (struct \fBcell\fP board[ROWS][COLS])"
+
+.PP
+counts neighbours\&. This function counts objects on neighbouring cells\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIboard\fP The game board represented as a 2D array of cells\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.SS "int count_neighbors (struct \fBcell\fP board[ROWS][COLS], int row, int col)"
+
+.SS "int init_gameboard (struct \fBcell\fP board[ROWS][COLS])"
+
+.PP
+Initializes the game board\&. This function sets all cells on the game board to DEAD and initializes specific cells to ALIVE\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIboard\fP The game board represented as a 2D array of cells\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.SS "int main ()"
+
+.SS "void print_gameboard (struct \fBcell\fP board[ROWS][COLS])"
+
+.PP
+Prints the game board to the console\&. This function prints the current state of the game board to the console\&. Alive cells are represented by '*' characters, and dead cells are represented by '\&.' characters\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIboard\fP The game board represented as a 2D array of cells\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.SS "int update_gameboard (struct \fBcell\fP board[ROWS][COLS])"
+
+.PP
+Updates the game board to the next generation based on the current state\&. This function calculates the next generation of cells based on the current state and updates the game board accordingly\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIboard\fP The game board represented as a 2D array of cells\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

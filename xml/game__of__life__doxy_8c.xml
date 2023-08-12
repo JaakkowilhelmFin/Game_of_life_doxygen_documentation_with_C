@@ -1,0 +1,477 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="game__of__life__doxy_8c" kind="file" language="C++">
+    <compoundname>game_of_life_doxy.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>game_of_life_doxy.c</label>
+        <link refid="game__of__life__doxy_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structcell" prot="public">cell</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd" prot="public" static="no">
+        <name>ROWS</name>
+        <initializer>9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game_of_life_doxy.c" line="34" column="9" bodyfile="game_of_life_doxy.c" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48" prot="public" static="no">
+        <name>COLS</name>
+        <initializer>9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game_of_life_doxy.c" line="35" column="9" bodyfile="game_of_life_doxy.c" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="game__of__life__doxy_8c_1a3c8793c7acb4598d2ebcd8288f29ee69" prot="public" static="no">
+        <name>DEAD</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game_of_life_doxy.c" line="38" column="9" bodyfile="game_of_life_doxy.c" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" prot="public" static="no">
+        <name>ALIVE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game_of_life_doxy.c" line="39" column="9" bodyfile="game_of_life_doxy.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="game__of__life__doxy_8c_1ad0ed8d27aa1c83c33e6f64c96b61d28f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int init_gameboard</definition>
+        <argsstring>(struct cell board[ROWS][COLS])</argsstring>
+        <name>init_gameboard</name>
+        <param>
+          <type>struct <ref refid="structcell" kindref="compound">cell</ref></type>
+          <declname>board</declname>
+          <array>[ROWS][COLS]</array>
+        </param>
+        <briefdescription>
+<para>Initializes the game board. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function sets all cells on the game board to DEAD and initializes specific cells to ALIVE.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The game board represented as a 2D array of cells. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game_of_life_doxy.c" line="132" column="6" bodyfile="game_of_life_doxy.c" bodystart="132" bodyend="159" declfile="game_of_life_doxy.c" declline="62" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="game__of__life__doxy_8c_1a3c802876596a82ed145de5cec180241f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int update_gameboard</definition>
+        <argsstring>(struct cell board[ROWS][COLS])</argsstring>
+        <name>update_gameboard</name>
+        <param>
+          <type>struct <ref refid="structcell" kindref="compound">cell</ref></type>
+          <declname>board</declname>
+          <array>[ROWS][COLS]</array>
+        </param>
+        <briefdescription>
+<para>Updates the game board to the next generation based on the current state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function calculates the next generation of cells based on the current state and updates the game board accordingly.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The game board represented as a 2D array of cells. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game_of_life_doxy.c" line="204" column="5" bodyfile="game_of_life_doxy.c" bodystart="204" bodyend="250" declfile="game_of_life_doxy.c" declline="74" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="game__of__life__doxy_8c_1a64207035249e55d9a702276d2c4c571c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_gameboard</definition>
+        <argsstring>(struct cell board[ROWS][COLS])</argsstring>
+        <name>print_gameboard</name>
+        <param>
+          <type>struct <ref refid="structcell" kindref="compound">cell</ref></type>
+          <declname>board</declname>
+          <array>[ROWS][COLS]</array>
+        </param>
+        <briefdescription>
+<para>Prints the game board to the console. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function prints the current state of the game board to the console. Alive cells are represented by &apos;*&apos; characters, and dead cells are represented by &apos;.&apos; characters.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The game board represented as a 2D array of cells. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game_of_life_doxy.c" line="261" column="6" bodyfile="game_of_life_doxy.c" bodystart="261" bodyend="-1" declfile="game_of_life_doxy.c" declline="85" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="game__of__life__doxy_8c_1a202d5fa28fd35824163ef9c123cee178" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int count_neighbors</definition>
+        <argsstring>(struct cell board[ROWS][COLS])</argsstring>
+        <name>count_neighbors</name>
+        <param>
+          <type>struct <ref refid="structcell" kindref="compound">cell</ref></type>
+          <declname>board</declname>
+          <array>[ROWS][COLS]</array>
+        </param>
+        <briefdescription>
+<para>counts neighbours. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function counts objects on neighbouring cells.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>board</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The game board represented as a 2D array of cells. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game_of_life_doxy.c" line="97" column="5" declfile="game_of_life_doxy.c" declline="97" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="game__of__life__doxy_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game_of_life_doxy.c" line="102" column="5" bodyfile="game_of_life_doxy.c" bodystart="102" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="game__of__life__doxy_8c_1add5e4b14cfed81c380bc214562dcc7f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int count_neighbors</definition>
+        <argsstring>(struct cell board[ROWS][COLS], int row, int col)</argsstring>
+        <name>count_neighbors</name>
+        <param>
+          <type>struct <ref refid="structcell" kindref="compound">cell</ref></type>
+          <declname>board</declname>
+          <array>[ROWS][COLS]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game_of_life_doxy.c" line="171" column="5" bodyfile="game_of_life_doxy.c" bodystart="171" bodyend="193"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*-------------------------------------------------------------------*</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>GLOBAL<sp/>VARIABLES<sp/>AND<sp/>CONSTANTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*--------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Control<sp/>flags<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Global<sp/>constants<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROWS<sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COLS<sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Global<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEAD<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALIVE<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Global<sp/>structures<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="structcell" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcell" kindref="compound">cell</ref></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcell_1ab04e2d55ea4a544f3575812582af7b51" kindref="member">current</ref>;<sp/></highlight><highlight class="comment">/*<sp/>current<sp/>situation,<sp/>which<sp/>is<sp/>visible<sp/>on<sp/>screen<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcell_1aa241470e0d60c525670c532ac936a87b" kindref="member">future</ref>;<sp/></highlight><highlight class="comment">/*<sp/>temporary<sp/>calculation<sp/>area<sp/>for<sp/>next<sp/>round<sp/>calculation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/*-------------------------------------------------------------------*</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>FUNCTION<sp/>PROTOTYPES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>*--------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game__of__life__doxy_8c_1ad0ed8d27aa1c83c33e6f64c96b61d28f" kindref="member">init_gameboard</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcell" kindref="compound">cell</ref><sp/>board[<ref refid="game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd" kindref="member">ROWS</ref>][<ref refid="game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48" kindref="member">COLS</ref>]);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game__of__life__doxy_8c_1a3c802876596a82ed145de5cec180241f" kindref="member">update_gameboard</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcell" kindref="compound">cell</ref><sp/>board[<ref refid="game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd" kindref="member">ROWS</ref>][<ref refid="game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48" kindref="member">COLS</ref>]);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game__of__life__doxy_8c_1a64207035249e55d9a702276d2c4c571c" kindref="member">print_gameboard</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcell" kindref="compound">cell</ref><sp/>board[<ref refid="game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd" kindref="member">ROWS</ref>][<ref refid="game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48" kindref="member">COLS</ref>]);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game__of__life__doxy_8c_1a202d5fa28fd35824163ef9c123cee178" kindref="member">count_neighbors</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcell" kindref="compound">cell</ref><sp/>board[<ref refid="game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd" kindref="member">ROWS</ref>][<ref refid="game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48" kindref="member">COLS</ref>]);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">/*********************************************************************</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>MAIN<sp/>PROGRAM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game__of__life__doxy_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcell" kindref="compound">cell</ref><sp/>board[<ref refid="game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd" kindref="member">ROWS</ref>][<ref refid="game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48" kindref="member">COLS</ref>];</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><ref refid="game__of__life__doxy_8c_1ad0ed8d27aa1c83c33e6f64c96b61d28f" kindref="member">init_gameboard</ref>(board);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=0;<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><ref refid="game__of__life__doxy_8c_1a64207035249e55d9a702276d2c4c571c" kindref="member">print_gameboard</ref>(board);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i;<sp/>i<sp/>&lt;<sp/>10;<sp/>i++)<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="game__of__life__doxy_8c_1a3c802876596a82ed145de5cec180241f" kindref="member">update_gameboard</ref>(board);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="game__of__life__doxy_8c_1a64207035249e55d9a702276d2c4c571c" kindref="member">print_gameboard</ref>(board);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>end<sp/>of<sp/>main<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">/*********************************************************************</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>FUNCTIONS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment">/*********************************************************************</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/>F<sp/>U<sp/>N<sp/>C<sp/>T<sp/>I<sp/>O<sp/>N<sp/><sp/><sp/><sp/>D<sp/>E<sp/>S<sp/>C<sp/>R<sp/>I<sp/>P<sp/>T<sp/>I<sp/>O<sp/>N</highlight></codeline>
+<codeline lineno="124"><highlight class="comment">---------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/>NAME:<sp/>init_gameboard();</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>DESCRIPTION:<sp/>gives<sp/>an<sp/>array<sp/>of<sp/>the<sp/>game<sp/>(board)</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/><sp/>Input:<sp/>all<sp/>are<sp/>zeroes.<sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/>Output:<sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/>Used<sp/>global<sp/>variables:struct</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/>REMARKS<sp/>when<sp/>using<sp/>this<sp/>function:</highlight></codeline>
+<codeline lineno="131"><highlight class="comment">*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game__of__life__doxy_8c_1ad0ed8d27aa1c83c33e6f64c96b61d28f" kindref="member">init_gameboard</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcell" kindref="compound">cell</ref><sp/>board[<ref refid="game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd" kindref="member">ROWS</ref>][<ref refid="game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48" kindref="member">COLS</ref>])</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;<sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j;<sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=0;<sp/>i<sp/>&lt;<sp/><ref refid="game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd" kindref="member">ROWS</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(j=0;<sp/>j<sp/>&lt;<sp/><ref refid="game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48" kindref="member">COLS</ref>;<sp/>j++)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>board[i][j].current<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1a3c8793c7acb4598d2ebcd8288f29ee69" kindref="member">DEAD</ref><sp/>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>board[i][j].future<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1a3c8793c7acb4598d2ebcd8288f29ee69" kindref="member">DEAD</ref>;<sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>board[3][7].current<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>board[3][3].current<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;<sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>board[5][7].current<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>board[1][2].current<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;<sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>board[5][5].current<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>board[1][4].current<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>board[6][7].current<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>board[5][8].current<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>board[3][4].current<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;<sp/></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>board[3][5].current<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>board[2][5].current<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;<sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>board[5][4].current<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>board[1][3].current<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>board[1][2].current<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment">/*********************************************************************</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/><sp/>F<sp/>U<sp/>N<sp/>C<sp/>T<sp/>I<sp/>O<sp/>N<sp/><sp/><sp/><sp/>D<sp/>E<sp/>S<sp/>C<sp/>R<sp/>I<sp/>P<sp/>T<sp/>I<sp/>O<sp/>N</highlight></codeline>
+<codeline lineno="163"><highlight class="comment">---------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/>NAME:<sp/>int<sp/>count_neighbors()</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/>DESCRIPTION:<sp/>counts<sp/>the<sp/>neighbors</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/><sp/><sp/><sp/>Input:</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/><sp/><sp/><sp/>Output:<sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/><sp/>Used<sp/>global<sp/>variables:struct</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/>REMARKS<sp/>when<sp/>using<sp/>this<sp/>function:</highlight></codeline>
+<codeline lineno="170"><highlight class="comment">*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game__of__life__doxy_8c_1a202d5fa28fd35824163ef9c123cee178" kindref="member">count_neighbors</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcell" kindref="compound">cell</ref><sp/>board[<ref refid="game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd" kindref="member">ROWS</ref>][<ref refid="game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48" kindref="member">COLS</ref>],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count=<sp/>0;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j;<sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>-1;<sp/>i<sp/>&lt;=<sp/>1;<sp/>i++)</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>j=<sp/>-1;<sp/>j<sp/>&lt;=<sp/>1;<sp/>j++)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>!=<sp/>0<sp/>||<sp/>j<sp/>!=0)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count<sp/>=<sp/>count<sp/>+<sp/>0;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(board[i+row][j+col].<ref refid="structcell_1ab04e2d55ea4a544f3575812582af7b51" kindref="member">current</ref><sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="comment">/*********************************************************************</highlight></codeline>
+<codeline lineno="195"><highlight class="comment"><sp/><sp/><sp/><sp/>F<sp/>U<sp/>N<sp/>C<sp/>T<sp/>I<sp/>O<sp/>N<sp/><sp/><sp/><sp/>D<sp/>E<sp/>S<sp/>C<sp/>R<sp/>I<sp/>P<sp/>T<sp/>I<sp/>O<sp/>N</highlight></codeline>
+<codeline lineno="196"><highlight class="comment">---------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="197"><highlight class="comment"><sp/>NAME:<sp/>int<sp/>update_gameboard()</highlight></codeline>
+<codeline lineno="198"><highlight class="comment"><sp/>DESCRIPTION:<sp/>updates<sp/>game<sp/>from<sp/>future<sp/>situation<sp/>to<sp/>present</highlight></codeline>
+<codeline lineno="199"><highlight class="comment"><sp/><sp/><sp/><sp/>Input:</highlight></codeline>
+<codeline lineno="200"><highlight class="comment"><sp/><sp/><sp/><sp/>Output:<sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="comment"><sp/><sp/>Used<sp/>global<sp/>variables:struct</highlight></codeline>
+<codeline lineno="202"><highlight class="comment"><sp/>REMARKS<sp/>when<sp/>using<sp/>this<sp/>function:</highlight></codeline>
+<codeline lineno="203"><highlight class="comment">*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game__of__life__doxy_8c_1a3c802876596a82ed145de5cec180241f" kindref="member">update_gameboard</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcell" kindref="compound">cell</ref><sp/>board[<ref refid="game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd" kindref="member">ROWS</ref>][<ref refid="game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48" kindref="member">COLS</ref>])</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j;<sp/></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>neighborhood<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1a202d5fa28fd35824163ef9c123cee178" kindref="member">count_neighbors</ref>(board,<sp/>i,<sp/>j);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;i<sp/>&lt;<sp/><ref refid="game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd" kindref="member">ROWS</ref><sp/>;<sp/>i++)</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48" kindref="member">COLS</ref>;<sp/>j++)</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(board[i][j].<ref refid="structcell_1ab04e2d55ea4a544f3575812582af7b51" kindref="member">current</ref>)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>:</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(neighborhood<sp/>&lt;<sp/>2<sp/>||<sp/>neighborhood<sp/>&gt;<sp/>3)</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>board[i][j].future<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1a3c8793c7acb4598d2ebcd8288f29ee69" kindref="member">DEAD</ref>;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>board[i][j].future<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="game__of__life__doxy_8c_1a3c8793c7acb4598d2ebcd8288f29ee69" kindref="member">DEAD</ref>:</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>neighborhood<sp/>==<sp/>3)</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>board[i][j].future<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>board[i][j].future<sp/>=<sp/><ref refid="game__of__life__doxy_8c_1a3c8793c7acb4598d2ebcd8288f29ee69" kindref="member">DEAD</ref>;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;invalid<sp/>operation.<sp/>something<sp/>went<sp/>wrong&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/>}<sp/><sp/></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;i<sp/>&lt;<sp/><ref refid="game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd" kindref="member">ROWS</ref><sp/>;<sp/>i++)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48" kindref="member">COLS</ref>;<sp/>j++)</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>board[i][j].current<sp/>=<sp/>board[i][j].future;<sp/></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="comment">/*********************************************************************</highlight></codeline>
+<codeline lineno="252"><highlight class="comment"><sp/><sp/><sp/><sp/>F<sp/>U<sp/>N<sp/>C<sp/>T<sp/>I<sp/>O<sp/>N<sp/><sp/><sp/><sp/>D<sp/>E<sp/>S<sp/>C<sp/>R<sp/>I<sp/>P<sp/>T<sp/>I<sp/>O<sp/>N</highlight></codeline>
+<codeline lineno="253"><highlight class="comment">---------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="254"><highlight class="comment"><sp/>NAME:<sp/>void<sp/>print_gameboard()</highlight></codeline>
+<codeline lineno="255"><highlight class="comment"><sp/>DESCRIPTION:<sp/>prints<sp/>gameboard<sp/>to<sp/>screen</highlight></codeline>
+<codeline lineno="256"><highlight class="comment"><sp/><sp/><sp/><sp/>Input:</highlight></codeline>
+<codeline lineno="257"><highlight class="comment"><sp/><sp/><sp/><sp/>Output:<sp/></highlight></codeline>
+<codeline lineno="258"><highlight class="comment"><sp/><sp/>Used<sp/>global<sp/>variables:struct</highlight></codeline>
+<codeline lineno="259"><highlight class="comment"><sp/>REMARKS<sp/>when<sp/>using<sp/>this<sp/>function:</highlight></codeline>
+<codeline lineno="260"><highlight class="comment">*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game__of__life__doxy_8c_1a64207035249e55d9a702276d2c4c571c" kindref="member">print_gameboard</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcell" kindref="compound">cell</ref><sp/>board[<ref refid="game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd" kindref="member">ROWS</ref>][<ref refid="game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48" kindref="member">COLS</ref>])</highlight></codeline>
+<codeline lineno="262"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd" kindref="member">ROWS</ref>;<sp/>i++)<sp/></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48" kindref="member">COLS</ref>;<sp/>j++)<sp/></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(board[i][j].<ref refid="structcell_1ab04e2d55ea4a544f3575812582af7b51" kindref="member">current</ref><sp/>==<sp/><ref refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kindref="member">ALIVE</ref>)<sp/></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+    </programlisting>
+    <location file="game_of_life_doxy.c"/>
+  </compounddef>
+</doxygen>

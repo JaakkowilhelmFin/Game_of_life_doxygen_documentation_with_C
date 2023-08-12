@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="structcell" kind="struct" language="C++" prot="public">
+    <compoundname>cell</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcell_1ab04e2d55ea4a544f3575812582af7b51" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <qualifiedname>cell::current</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game_of_life_doxy.c" line="45" column="6" bodyfile="game_of_life_doxy.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcell_1aa241470e0d60c525670c532ac936a87b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int future</definition>
+        <argsstring></argsstring>
+        <name>future</name>
+        <qualifiedname>cell::future</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="game_of_life_doxy.c" line="47" column="6" bodyfile="game_of_life_doxy.c" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="game_of_life_doxy.c" line="42" column="1" bodyfile="game_of_life_doxy.c" bodystart="43" bodyend="49"/>
+    <listofallmembers>
+      <member refid="structcell_1ab04e2d55ea4a544f3575812582af7b51" prot="public" virt="non-virtual"><scope>cell</scope><name>current</name></member>
+      <member refid="structcell_1aa241470e0d60c525670c532ac936a87b" prot="public" virt="non-virtual"><scope>cell</scope><name>future</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

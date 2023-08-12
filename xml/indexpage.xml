@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Game of Life - Simple Version</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="index_1intro_sec">
+<title>Introduction</title>
+<para>This program is a simple implementation of Conway&apos;s Game of Life, a cellular automaton simulation. It evolves according to certain rules based on the initial configuration of cells.</para>
+</sect1>
+<sect1 id="index_1usage_sec">
+<title>Usage</title>
+<para><itemizedlist>
+<listitem><para>Compile: gcc -o game_of_life game_of_life.c</para>
+</listitem><listitem><para>Run: ./game_of_life </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="game_of_life_doxy.c"/>
+  </compounddef>
+</doxygen>

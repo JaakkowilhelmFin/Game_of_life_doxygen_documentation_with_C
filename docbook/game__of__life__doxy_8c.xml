@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_game__of__life__doxy_8c" xml:lang="en-US">
+<title>game_of_life_doxy.c File Reference</title>
+<indexterm><primary>game_of_life_doxy.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;<?linebreak?>#include &lt;stdlib.h&gt;<?linebreak?>#include &lt;string.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structcell">cell</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd">ROWS</link>&#160;&#160;&#160;9</para>
+</listitem>
+            <listitem><para>#define <link linkend="_game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48">COLS</link>&#160;&#160;&#160;9</para>
+</listitem>
+            <listitem><para>#define <link linkend="_game__of__life__doxy_8c_1a3c8793c7acb4598d2ebcd8288f29ee69">DEAD</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d">ALIVE</link>&#160;&#160;&#160;1</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_game__of__life__doxy_8c_1ad0ed8d27aa1c83c33e6f64c96b61d28f">init_gameboard</link> (struct <link linkend="_structcell">cell</link> board[<link linkend="_game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd">ROWS</link>][<link linkend="_game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48">COLS</link>])</para>
+
+<para>Initializes the game board. </para>
+</listitem>
+            <listitem><para>int <link linkend="_game__of__life__doxy_8c_1a3c802876596a82ed145de5cec180241f">update_gameboard</link> (struct <link linkend="_structcell">cell</link> board[<link linkend="_game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd">ROWS</link>][<link linkend="_game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48">COLS</link>])</para>
+
+<para>Updates the game board to the next generation based on the current state. </para>
+</listitem>
+            <listitem><para>void <link linkend="_game__of__life__doxy_8c_1a64207035249e55d9a702276d2c4c571c">print_gameboard</link> (struct <link linkend="_structcell">cell</link> board[<link linkend="_game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd">ROWS</link>][<link linkend="_game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48">COLS</link>])</para>
+
+<para>Prints the game board to the console. </para>
+</listitem>
+            <listitem><para>int <link linkend="_game__of__life__doxy_8c_1a202d5fa28fd35824163ef9c123cee178">count_neighbors</link> (struct <link linkend="_structcell">cell</link> board[<link linkend="_game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd">ROWS</link>][<link linkend="_game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48">COLS</link>])</para>
+
+<para>counts neighbours. </para>
+</listitem>
+            <listitem><para>int <link linkend="_game__of__life__doxy_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_game__of__life__doxy_8c_1add5e4b14cfed81c380bc214562dcc7f8">count_neighbors</link> (struct <link linkend="_structcell">cell</link> board[<link linkend="_game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd">ROWS</link>][<link linkend="_game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48">COLS</link>], int row, int col)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d"/><section>
+    <title>ALIVE</title>
+<indexterm><primary>ALIVE</primary><secondary>game_of_life_doxy.c</secondary></indexterm>
+<indexterm><primary>game_of_life_doxy.c</primary><secondary>ALIVE</secondary></indexterm>
+<para><computeroutput>#define ALIVE&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="_game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48"/><section>
+    <title>COLS</title>
+<indexterm><primary>COLS</primary><secondary>game_of_life_doxy.c</secondary></indexterm>
+<indexterm><primary>game_of_life_doxy.c</primary><secondary>COLS</secondary></indexterm>
+<para><computeroutput>#define COLS&#160;&#160;&#160;9</computeroutput></para></section>
+<anchor xml:id="_game__of__life__doxy_8c_1a3c8793c7acb4598d2ebcd8288f29ee69"/><section>
+    <title>DEAD</title>
+<indexterm><primary>DEAD</primary><secondary>game_of_life_doxy.c</secondary></indexterm>
+<indexterm><primary>game_of_life_doxy.c</primary><secondary>DEAD</secondary></indexterm>
+<para><computeroutput>#define DEAD&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="_game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd"/><section>
+    <title>ROWS</title>
+<indexterm><primary>ROWS</primary><secondary>game_of_life_doxy.c</secondary></indexterm>
+<indexterm><primary>game_of_life_doxy.c</primary><secondary>ROWS</secondary></indexterm>
+<para><computeroutput>#define ROWS&#160;&#160;&#160;9</computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_game__of__life__doxy_8c_1a202d5fa28fd35824163ef9c123cee178"/><section>
+    <title>count_neighbors()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>count_neighbors</primary><secondary>game_of_life_doxy.c</secondary></indexterm>
+<indexterm><primary>game_of_life_doxy.c</primary><secondary>count_neighbors</secondary></indexterm>
+<para><computeroutput>int count_neighbors (struct <link linkend="_structcell">cell</link> board[ROWS][COLS])</computeroutput></para><para>
+
+<para>counts neighbours. </para>
+</para>
+
+<para>This function counts objects on neighbouring cells.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>board</entry><entry>
+<para>The game board represented as a 2D array of cells. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_game__of__life__doxy_8c_1add5e4b14cfed81c380bc214562dcc7f8"/><section>
+    <title>count_neighbors()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>count_neighbors</primary><secondary>game_of_life_doxy.c</secondary></indexterm>
+<indexterm><primary>game_of_life_doxy.c</primary><secondary>count_neighbors</secondary></indexterm>
+<para><computeroutput>int count_neighbors (struct <link linkend="_structcell">cell</link> board[ROWS][COLS], int row, int col)</computeroutput></para></section>
+<anchor xml:id="_game__of__life__doxy_8c_1ad0ed8d27aa1c83c33e6f64c96b61d28f"/><section>
+    <title>init_gameboard()</title>
+<indexterm><primary>init_gameboard</primary><secondary>game_of_life_doxy.c</secondary></indexterm>
+<indexterm><primary>game_of_life_doxy.c</primary><secondary>init_gameboard</secondary></indexterm>
+<para><computeroutput>int init_gameboard (struct <link linkend="_structcell">cell</link> board[ROWS][COLS])</computeroutput></para><para>
+
+<para>Initializes the game board. </para>
+</para>
+
+<para>This function sets all cells on the game board to DEAD and initializes specific cells to ALIVE.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>board</entry><entry>
+<para>The game board represented as a 2D array of cells. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_game__of__life__doxy_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>game_of_life_doxy.c</secondary></indexterm>
+<indexterm><primary>game_of_life_doxy.c</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main ( )</computeroutput></para></section>
+<anchor xml:id="_game__of__life__doxy_8c_1a64207035249e55d9a702276d2c4c571c"/><section>
+    <title>print_gameboard()</title>
+<indexterm><primary>print_gameboard</primary><secondary>game_of_life_doxy.c</secondary></indexterm>
+<indexterm><primary>game_of_life_doxy.c</primary><secondary>print_gameboard</secondary></indexterm>
+<para><computeroutput>void print_gameboard (struct <link linkend="_structcell">cell</link> board[ROWS][COLS])</computeroutput></para><para>
+
+<para>Prints the game board to the console. </para>
+</para>
+
+<para>This function prints the current state of the game board to the console. Alive cells are represented by &apos;*&apos; characters, and dead cells are represented by &apos;.&apos; characters.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>board</entry><entry>
+<para>The game board represented as a 2D array of cells. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_game__of__life__doxy_8c_1a3c802876596a82ed145de5cec180241f"/><section>
+    <title>update_gameboard()</title>
+<indexterm><primary>update_gameboard</primary><secondary>game_of_life_doxy.c</secondary></indexterm>
+<indexterm><primary>game_of_life_doxy.c</primary><secondary>update_gameboard</secondary></indexterm>
+<para><computeroutput>int update_gameboard (struct <link linkend="_structcell">cell</link> board[ROWS][COLS])</computeroutput></para><para>
+
+<para>Updates the game board to the next generation based on the current state. </para>
+</para>
+
+<para>This function calculates the next generation of cells based on the current state and updates the game board accordingly.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>board</entry><entry>
+<para>The game board represented as a 2D array of cells. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.7" xml:lang="en-US">
+  <compound refid="structcell" kind="struct"><name>cell</name>
+    <member refid="structcell_1ab04e2d55ea4a544f3575812582af7b51" kind="variable"><name>current</name></member>
+    <member refid="structcell_1aa241470e0d60c525670c532ac936a87b" kind="variable"><name>future</name></member>
+  </compound>
+  <compound refid="game__of__life__doxy_8c" kind="file"><name>game_of_life_doxy.c</name>
+    <member refid="game__of__life__doxy_8c_1a3cfd3aa62338d12609f6d65bce97e9cd" kind="define"><name>ROWS</name></member>
+    <member refid="game__of__life__doxy_8c_1ab59ad2ee1a48b83c2eef1f019ed8cc48" kind="define"><name>COLS</name></member>
+    <member refid="game__of__life__doxy_8c_1a3c8793c7acb4598d2ebcd8288f29ee69" kind="define"><name>DEAD</name></member>
+    <member refid="game__of__life__doxy_8c_1ad8beef706da0344be19d59438fcdab6d" kind="define"><name>ALIVE</name></member>
+    <member refid="game__of__life__doxy_8c_1ad0ed8d27aa1c83c33e6f64c96b61d28f" kind="function"><name>init_gameboard</name></member>
+    <member refid="game__of__life__doxy_8c_1a3c802876596a82ed145de5cec180241f" kind="function"><name>update_gameboard</name></member>
+    <member refid="game__of__life__doxy_8c_1a64207035249e55d9a702276d2c4c571c" kind="function"><name>print_gameboard</name></member>
+    <member refid="game__of__life__doxy_8c_1a202d5fa28fd35824163ef9c123cee178" kind="function"><name>count_neighbors</name></member>
+    <member refid="game__of__life__doxy_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+    <member refid="game__of__life__doxy_8c_1add5e4b14cfed81c380bc214562dcc7f8" kind="function"><name>count_neighbors</name></member>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,158 @@
+\doxysection{game\+\_\+of\+\_\+life\+\_\+doxy.\+c File Reference}
+\hypertarget{game__of__life__doxy_8c}{}\label{game__of__life__doxy_8c}\index{game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcell}{cell}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{game__of__life__doxy_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{ROWS}}~9
+\item 
+\#define \mbox{\hyperlink{game__of__life__doxy_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{COLS}}~9
+\item 
+\#define \mbox{\hyperlink{game__of__life__doxy_8c_a3c8793c7acb4598d2ebcd8288f29ee69}{DEAD}}~0
+\item 
+\#define \mbox{\hyperlink{game__of__life__doxy_8c_ad8beef706da0344be19d59438fcdab6d}{ALIVE}}~1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{game__of__life__doxy_8c_ad0ed8d27aa1c83c33e6f64c96b61d28f}{init\+\_\+gameboard}} (struct \mbox{\hyperlink{structcell}{cell}} board\mbox{[}\mbox{\hyperlink{game__of__life__doxy_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{ROWS}}\mbox{]}\mbox{[}\mbox{\hyperlink{game__of__life__doxy_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{COLS}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Initializes the game board. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__of__life__doxy_8c_a3c802876596a82ed145de5cec180241f}{update\+\_\+gameboard}} (struct \mbox{\hyperlink{structcell}{cell}} board\mbox{[}\mbox{\hyperlink{game__of__life__doxy_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{ROWS}}\mbox{]}\mbox{[}\mbox{\hyperlink{game__of__life__doxy_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{COLS}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Updates the game board to the next generation based on the current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__of__life__doxy_8c_a64207035249e55d9a702276d2c4c571c}{print\+\_\+gameboard}} (struct \mbox{\hyperlink{structcell}{cell}} board\mbox{[}\mbox{\hyperlink{game__of__life__doxy_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{ROWS}}\mbox{]}\mbox{[}\mbox{\hyperlink{game__of__life__doxy_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{COLS}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Prints the game board to the console. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__of__life__doxy_8c_a202d5fa28fd35824163ef9c123cee178}{count\+\_\+neighbors}} (struct \mbox{\hyperlink{structcell}{cell}} board\mbox{[}\mbox{\hyperlink{game__of__life__doxy_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{ROWS}}\mbox{]}\mbox{[}\mbox{\hyperlink{game__of__life__doxy_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{COLS}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em counts neighbours. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__of__life__doxy_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\item 
+int \mbox{\hyperlink{game__of__life__doxy_8c_add5e4b14cfed81c380bc214562dcc7f8}{count\+\_\+neighbors}} (struct \mbox{\hyperlink{structcell}{cell}} board\mbox{[}\mbox{\hyperlink{game__of__life__doxy_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{ROWS}}\mbox{]}\mbox{[}\mbox{\hyperlink{game__of__life__doxy_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}{COLS}}\mbox{]}, int row, int col)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{game__of__life__doxy_8c_ad8beef706da0344be19d59438fcdab6d}\label{game__of__life__doxy_8c_ad8beef706da0344be19d59438fcdab6d} 
+\index{game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}!ALIVE@{ALIVE}}
+\index{ALIVE@{ALIVE}!game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}}
+\doxysubsubsection{\texorpdfstring{ALIVE}{ALIVE}}
+{\footnotesize\ttfamily \#define ALIVE~1}
+
+\Hypertarget{game__of__life__doxy_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48}\label{game__of__life__doxy_8c_ab59ad2ee1a48b83c2eef1f019ed8cc48} 
+\index{game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}!COLS@{COLS}}
+\index{COLS@{COLS}!game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}}
+\doxysubsubsection{\texorpdfstring{COLS}{COLS}}
+{\footnotesize\ttfamily \#define COLS~9}
+
+\Hypertarget{game__of__life__doxy_8c_a3c8793c7acb4598d2ebcd8288f29ee69}\label{game__of__life__doxy_8c_a3c8793c7acb4598d2ebcd8288f29ee69} 
+\index{game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}!DEAD@{DEAD}}
+\index{DEAD@{DEAD}!game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}}
+\doxysubsubsection{\texorpdfstring{DEAD}{DEAD}}
+{\footnotesize\ttfamily \#define DEAD~0}
+
+\Hypertarget{game__of__life__doxy_8c_a3cfd3aa62338d12609f6d65bce97e9cd}\label{game__of__life__doxy_8c_a3cfd3aa62338d12609f6d65bce97e9cd} 
+\index{game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}!ROWS@{ROWS}}
+\index{ROWS@{ROWS}!game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}}
+\doxysubsubsection{\texorpdfstring{ROWS}{ROWS}}
+{\footnotesize\ttfamily \#define ROWS~9}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{game__of__life__doxy_8c_a202d5fa28fd35824163ef9c123cee178}\label{game__of__life__doxy_8c_a202d5fa28fd35824163ef9c123cee178} 
+\index{game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}!count\_neighbors@{count\_neighbors}}
+\index{count\_neighbors@{count\_neighbors}!game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}}
+\doxysubsubsection{\texorpdfstring{count\_neighbors()}{count\_neighbors()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int count\+\_\+neighbors (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structcell}{cell}}}]{board\mbox{[}\+ROWS\mbox{]}\mbox{[}\+COLS\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+counts neighbours. 
+
+This function counts objects on neighbouring cells.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board represented as a 2D array of cells. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{game__of__life__doxy_8c_add5e4b14cfed81c380bc214562dcc7f8}\label{game__of__life__doxy_8c_add5e4b14cfed81c380bc214562dcc7f8} 
+\index{game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}!count\_neighbors@{count\_neighbors}}
+\index{count\_neighbors@{count\_neighbors}!game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}}
+\doxysubsubsection{\texorpdfstring{count\_neighbors()}{count\_neighbors()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int count\+\_\+neighbors (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structcell}{cell}}}]{board\mbox{[}\+ROWS\mbox{]}\mbox{[}\+COLS\mbox{]},  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+\Hypertarget{game__of__life__doxy_8c_ad0ed8d27aa1c83c33e6f64c96b61d28f}\label{game__of__life__doxy_8c_ad0ed8d27aa1c83c33e6f64c96b61d28f} 
+\index{game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}!init\_gameboard@{init\_gameboard}}
+\index{init\_gameboard@{init\_gameboard}!game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}}
+\doxysubsubsection{\texorpdfstring{init\_gameboard()}{init\_gameboard()}}
+{\footnotesize\ttfamily int init\+\_\+gameboard (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structcell}{cell}}}]{board\mbox{[}\+ROWS\mbox{]}\mbox{[}\+COLS\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Initializes the game board. 
+
+This function sets all cells on the game board to DEAD and initializes specific cells to ALIVE.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board represented as a 2D array of cells. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{game__of__life__doxy_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{game__of__life__doxy_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}!main@{main}}
+\index{main@{main}!game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{game__of__life__doxy_8c_a64207035249e55d9a702276d2c4c571c}\label{game__of__life__doxy_8c_a64207035249e55d9a702276d2c4c571c} 
+\index{game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}!print\_gameboard@{print\_gameboard}}
+\index{print\_gameboard@{print\_gameboard}!game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}}
+\doxysubsubsection{\texorpdfstring{print\_gameboard()}{print\_gameboard()}}
+{\footnotesize\ttfamily void print\+\_\+gameboard (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structcell}{cell}}}]{board\mbox{[}\+ROWS\mbox{]}\mbox{[}\+COLS\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Prints the game board to the console. 
+
+This function prints the current state of the game board to the console. Alive cells are represented by \textquotesingle{}\texorpdfstring{$\ast$}{*}\textquotesingle{} characters, and dead cells are represented by \textquotesingle{}.\textquotesingle{} characters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board represented as a 2D array of cells. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{game__of__life__doxy_8c_a3c802876596a82ed145de5cec180241f}\label{game__of__life__doxy_8c_a3c802876596a82ed145de5cec180241f} 
+\index{game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}!update\_gameboard@{update\_gameboard}}
+\index{update\_gameboard@{update\_gameboard}!game\_of\_life\_doxy.c@{game\_of\_life\_doxy.c}}
+\doxysubsubsection{\texorpdfstring{update\_gameboard()}{update\_gameboard()}}
+{\footnotesize\ttfamily int update\+\_\+gameboard (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structcell}{cell}}}]{board\mbox{[}\+ROWS\mbox{]}\mbox{[}\+COLS\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Updates the game board to the next generation based on the current state. 
+
+This function calculates the next generation of cells based on the current state and updates the game board accordingly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The game board represented as a 2D array of cells. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
