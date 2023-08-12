@@ -94,7 +94,7 @@ void print_gameboard(struct cell board[ROWS][COLS]);
  * @return void
  */
 
-int count_neighbors(struct cell board[ROWS][COLS]);
+int count_neighbors(struct cell board[ROWS][COLS], int row, int col);
 
 /*********************************************************************
  *    MAIN PROGRAM                                                      *
@@ -278,3 +278,4 @@ void print_gameboard(struct cell board[ROWS][COLS])
         printf("\n");
     }
   printf("\n");
+}
